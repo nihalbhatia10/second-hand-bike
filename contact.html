@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RevX</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <span class="logo-red">Rev</span><span>X</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header section">
+        <div class="container">
+            <h1>Get In <span class="text-gradient logo-red">Touch</span></h1>
+            <p>Ready to ride? Schedule a test drive or ask us anything.</p>
+        </div>
+    </header>
+
+    <main class="section" style="padding-top: 0;">
+        <div class="container contact-container">
+            
+            <!-- Contact Form Area -->
+            <div class="contact-form-wrapper fade-in">
+                <h2>Send an Inquiry</h2>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent! We will contact you shortly.');">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interested In</label>
+                        <select id="interest" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="sport">Sport Bikes</option>
+                            <option value="cruiser">Cruisers</option>
+                            <option value="electric">Electric Scooters</option>
+                            <option value="naked">Naked Street Bikes</option>
+                            <option value="other">General Inquiry / Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="I would like to schedule a test ride for..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </form>
+            </div>
+
+            <!-- Contact Info & Map Area -->
+            <div class="contact-info-wrapper slide-up">
+                <div class="info-card">
+                    <h3>Contact <span class="text-gradient">Information</span></h3>
+                    <ul class="info-list">
+                        <li>
+                            <ion-icon name="location-outline"></ion-icon>
+                            <span>1234 Apex Moto Blvd, Automotive District, CA 90210</span>
+                        </li>
+                        <li>
+                            <ion-icon name="call-outline"></ion-icon>
+                            <span>+1 (800) REVX-RIDE</span>
+                        </li>
+                        <li>
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>sales@revx.com</span>
+                        </li>
+                        <li>
+                            <ion-icon name="time-outline"></ion-icon>
+                            <span>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="map-container">
+                    <!-- Google Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105658.20464673898!2d-118.41173250000002!3d34.093745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc35fbd218fe%3A0x6f2729e7311cebc9!2sBeverly%20Hills%2C%20CA!5e0!3m2!1sen!2sus!4v1700200000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

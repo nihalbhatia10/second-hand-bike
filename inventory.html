@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory | RevX</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <span class="logo-red">Rev</span><span>X</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="inventory.html" class="active">Inventory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header section">
+        <div class="container">
+            <h1>Our <span class="text-gradient logo-red">Inventory</span></h1>
+            <p>Browse our complete collection of meticulously inspected 2-wheelers.</p>
+        </div>
+    </header>
+
+    <!-- Inventory Filter & Grid -->
+    <main class="section" style="padding-top: 0;">
+        <div class="container">
+            <!-- Filtering UI -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Models</button>
+                <button class="filter-btn" data-filter="sport">Sport</button>
+                <button class="filter-btn" data-filter="cruiser">Cruiser</button>
+                <button class="filter-btn" data-filter="electric">Electric</button>
+                <button class="filter-btn" data-filter="naked">Naked Street</button>
+            </div>
+
+            <!-- Bike Grid -->
+            <div class="bike-grid" id="inventory-grid">
+                
+                <!-- Item 1 -->
+                <div class="bike-card fade-in" data-category="sport">
+                    <div class="card-image-wrapper">
+                        <span class="card-badge">New Arrival</span>
+                        <img src="images/sport_bike_red_1773640102086.png" alt="Sport Bike" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bike-name">Apex RR 1000</h3>
+                        <p class="bike-specs">998cc • Inline 4 • 2022 Model</p>
+                        <div class="card-footer">
+                            <span class="bike-price">$14,500</span>
+                            <a href="#" class="view-details">Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bike-card fade-in" data-category="cruiser">
+                    <div class="card-image-wrapper">
+                        <img src="images/cruiser_bike_dark_1773640118405.png" alt="Cruiser" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bike-name">Midnight Iron 850</h3>
+                        <p class="bike-specs">850cc • V-Twin • 2021 Model</p>
+                        <div class="card-footer">
+                            <span class="bike-price">$11,200</span>
+                            <a href="#" class="view-details">Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bike-card fade-in" data-category="electric">
+                    <div class="card-image-wrapper">
+                        <span class="card-badge">Zero Emission</span>
+                        <img src="images/premium_scooter_white_1773640139172.png" alt="Electric Scooter" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bike-name">Urban Elite EV</h3>
+                        <p class="bike-specs">120km Range • Electric • 2023 Model</p>
+                        <div class="card-footer">
+                            <span class="bike-price">$4,800</span>
+                            <a href="#" class="view-details">Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bike-card fade-in" data-category="naked">
+                    <div class="card-image-wrapper">
+                        <img src="images/street_naked_bike_1773640308039.png" alt="Naked Bike" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bike-name">Graphite Z-900</h3>
+                        <p class="bike-specs">948cc • Inline 4 • 2020 Model</p>
+                        <div class="card-footer">
+                            <span class="bike-price">$8,900</span>
+                            <a href="#" class="view-details">Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
