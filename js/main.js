@@ -81,4 +81,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Web3Forms Contact Form Handling ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            
+            // Saving original button text
+            const btnOriginalText = submitBtn.innerHTML;
+            
+            // Loading state
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    // Success state
+                    submitBtn.innerHTML = 'Message Sent Successfully!';
+                    submitBtn.style.backgroundColor = '#28a745';
+                    contactForm.reset();
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = btnOriginalText;
+                        submitBtn.style.backgroundColor = '';
+                        submitBtn.disabled = false;
+                    }, 4000);
+                } else {
+                    // Error state provided by API
+                    console.log(response);
+                    submitBtn.innerHTML = json.message || 'Something went wrong!';
+                    submitBtn.style.backgroundColor = '#dc3545';
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = btnOriginalText;
+                        submitBtn.style.backgroundColor = '';
+                        submitBtn.disabled = false;
+                    }, 4000);
+                }
+            })
+            .catch(error => {
+                // Network error state
+                console.log(error);
+                submitBtn.innerHTML = 'Something went wrong!';
+                submitBtn.style.backgroundColor = '#dc3545';
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = btnOriginalText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.disabled = false;
+                }, 4000);
+            });
+        });
+    }
+
 });

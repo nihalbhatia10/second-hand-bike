@@ -48,7 +48,14 @@
             <!-- Contact Form Area -->
             <div class="contact-form-wrapper fade-in">
                 <h2>Send an Inquiry</h2>
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent! We will contact you shortly.');">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                    
+                    <!-- Web3Forms Required Fields -->
+                    <input type="hidden" name="access_key" value="cd732146-8f08-415a-acab-8508372c3cdb">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <input type="hidden" name="subject" value="New Bike Inquiry from RevX">
+                    <input type="hidden" name="from_name" value="RevX Website">
+                    
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" placeholder="John Doe" required>
