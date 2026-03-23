@@ -322,6 +322,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   max-width: 800px;
   z-index: 2;
+  margin-top: 140px; /* Force it down away from the header */
 }
 
 .badge {
@@ -334,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 24px;
-  margin-left: 60px;
+  margin-left: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
