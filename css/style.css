@@ -302,13 +302,13 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Hero Section --- */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh; /* Replaced fixed height to avoid overflow */
   display: flex;
   align-items: center;
   background-image: radial-gradient(circle at 70% 50%, rgba(255, 51, 51, 0.08) 0%, transparent 50%),
                     linear-gradient(to bottom, var(--bg-dark) 0%, #000 100%);
-  padding-top: 140px;
+  padding-top: 120px; /* Just enough padding to clear the 100px navbar safely */
+  padding-bottom: 60px; /* Add padding to the bottom so content never touches the edge */
 }
 
 .hero-overlay {
@@ -322,7 +322,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   max-width: 800px;
   z-index: 2;
-  margin-top: 140px; /* Force it down away from the header */
 }
 
 .badge {
