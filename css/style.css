@@ -649,3 +649,10 @@ h1, h2, h3, h4, h5, h6 {
   .hero-stats { flex-direction: column; gap: 20px; text-align: center; }
   .bike-grid { grid-template-columns: 1fr; }
 }
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-orientation: from-image;
+  transform: rotate(0deg);
+}
