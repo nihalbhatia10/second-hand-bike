@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- WhatsApp Floating Button ---
     const waLink = document.createElement('a');
-    waLink.href = 'https://api.whatsapp.com/send/?phone=919881188679&text=Hi!%20I%20visited%20your%20website.%20Could%20I%20please%20get%20more%20information%20about%20the%20current%20bikes%20you%20have%20available%3F';
+    waLink.href = 'https://api.whatsapp.com/send/?phone=919881188679&text=Hi!%20I%20visited%20your%20website.%20Could%20I%20please%20get%20more%20information%20about%20the%20current%20bikes%20you%20have%20available%3F&hl=en&lang=en';
     waLink.className = 'whatsapp-float';
     waLink.target = '_blank';
     waLink.rel = 'noopener noreferrer';
